@@ -5,9 +5,18 @@ public class LocationStats {
     private String state;
     private String country;
     private int latestTotalCases;
+    private int latestDeathCases;
     private int diffFromPrevDay;
 
-    public int getDiffFromPrevDay() {
+    public int getLatestDeathCases() {
+		return latestDeathCases;
+	}
+
+	public void setLatestDeathCases(int latestDeathCases) {
+		this.latestDeathCases = latestDeathCases;
+	}
+
+	public int getDiffFromPrevDay() {
         return diffFromPrevDay;
     }
 
@@ -45,6 +54,7 @@ public class LocationStats {
                 "state='" + state + '\'' +
                 ", country='" + country + '\'' +
                 ", latestTotalCases=" + latestTotalCases +
+                ", latestDeathCases=" + latestDeathCases +
                 '}';
     }
 }

@@ -27,13 +27,20 @@
         <span style="color:MediumSeaGreen;">New cases reported since previous day:</span>
         <span style="color:Violet;"th:text="${totalNewCases}"></span>
     </p>
-
+    <!-- <h1 class="display-4" style="color:Orange;"th:text="${totalDeathCases}"></h1>
+    <p class="lead" style="background-color:DodgerBlue;">Total cases death as of today</p>
+    <hr class="my-4">
+	<p>
+        <span style="color:MediumSeaGreen;">New cases reported since previous day:</span>
+        <span style="color:Violet;"th:text="${totalDeathCases}"></span>
+    </p> -->
 </div>
     <table class="table table-dark" border="5">
         <tr>
             <th style="color:DodgerBlue;">State</th>
             <th style="color:DodgerBlue;">Country</th>
             <th style="color:DodgerBlue;">Total cases reported</th>
+            <th style="color:DodgerBlue;">Total cases deaths</th>
             <th style="color:DodgerBlue;">Changes since last day</th>
             
         </tr>
@@ -41,6 +48,7 @@
             <td th:text="${locationStat.state}"></td>
             <td th:text="${locationStat.country}"></td>
             <td th:text="${locationStat.latestTotalCases}">0</td>
+            <td th:text="${locationStat.latestDeathCases}">0</td>
             <td th:text="${locationStat.diffFromPrevDay}">0</td>
         </tr>
     </table>
